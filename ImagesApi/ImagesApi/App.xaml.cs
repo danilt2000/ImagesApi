@@ -9,6 +9,7 @@ namespace ImagesApi
         public App()
         {
             InitializeComponent();
+            //MainPage = new NavigationPage(new Onboarding()) { BarBackgroundColor = Color.White, BarTextColor = Color.Black };
 
             MainPage = new MainPage();
         }

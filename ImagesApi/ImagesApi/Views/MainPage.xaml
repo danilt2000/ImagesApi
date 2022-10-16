@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImagesApi.MainPage">
+
+    <StackLayout x:Name="Layout">
+        <Frame BackgroundColor="#ff7101" Padding="24" CornerRadius="0">
+            <Label Text="Tomas Bata University" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label TextColor="#FF9541" Text="Start looking for an image now " FontSize="Title" Padding="30,40,30,10"/>
+        <Image HorizontalOptions="Center" 
+		  VerticalOptions="Center" 
+		  Source="TomasBataUniversitylogo.gif" 
+		       HeightRequest="250"
+		       Margin="0,0,0,0">
+           
+        </Image>
+
+        <Button
+			Text="Start "
+            TextColor="Black"  
+            HorizontalOptions="Center"
+		 WidthRequest="300" 
+		HeightRequest="50"
+		Margin="0,0,0,0" 
+			/>
+        <Label Margin="0,20,0,0"  HorizontalTextAlignment="Center" Text="Developer contact"> </Label>
+
+        <Grid Padding="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!-- Use Grid.Column to specify column -->
+            <Image HorizontalOptions="Center" 
+		  VerticalOptions="Center" 
+		  Source="facebookLogo.jpg" 
+		       Margin="80,0,0,0"
+                   Grid.Row="0"
+                   >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="TapGestureRecognizer_TappedFacebook"
+                    />
+
+                </Image.GestureRecognizers>
+            </Image>
+            <Image HorizontalOptions="Center" 
+		  VerticalOptions="Center" 
+		  Source="githubLogo.jpg" 
+		       Margin="0,0,0,0"
+                   Grid.Row="0"
+                    Grid.Column="1" 
+                   >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="TapGestureRecognizer_TappedGithub"
+                    />
+
+                </Image.GestureRecognizers>
+            </Image>
+            <Image HorizontalOptions="Center" 
+		  VerticalOptions="Center" 
+		  Source="VkLogo.jpg" 
+		       Margin="0,0,88,0"
+                   Grid.Row="0"
+                    Grid.Column="2" 
+                   >
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="TapGestureRecognizer_TappedVk"
+                    />
+
+                </Image.GestureRecognizers>
+            </Image>
+
+        </Grid>
+    
+    </StackLayout>
+
+</ContentPage>
