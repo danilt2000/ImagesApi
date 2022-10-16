@@ -18,9 +18,11 @@ namespace ImagesApi.Views
             InitializeComponent();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private  async void Button_Clicked(object sender, EventArgs e)
         {
-            var image = ImageLogic.GetImage("Hatsune Miku");
+            string image = await ImageLogic.GetImage(entry.Text);
+            mainImage.Source = image;
+            DownloadFile
         }
     }
 }

@@ -12,10 +12,9 @@ namespace ImagesApi.Logic
 {
     public class ImageLogic
     {
-        public static async Task<Image> GetImage(string name)
+        public static async Task<string> GetImage(string name)
         {
-            Image images = new Image();
-
+            string urlImage = string.Empty;
             string url = ImageRoot.GenerateUrl(name);
 
             //using (HttpClient client = new HttpClient())
@@ -43,8 +42,11 @@ namespace ImagesApi.Logic
             {
                 response.EnsureSuccessStatusCode();
                 var json = await response.Content.ReadAsStringAsync();
-              var  imageRoot = JsonConvert.DeserializeObject<ImageRoot>(json);
-                images= imageRoot.response.images as Image;
+              //var  imageRoot = JsonConvert.DeserializeObject<Image>(json);
+              Image image = JsonConvert.DeserializeObject<Image>(json);
+                urlImage= image.value[0].thumbnail;
+
+                //images = imageRoot.response.images as List<Image>;
 
             }
 
@@ -52,7 +54,7 @@ namespace ImagesApi.Logic
 
 
 
-            return images;
+            return urlImage;
 
         }
 

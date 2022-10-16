@@ -13,9 +13,8 @@ namespace ImagesApi.Model
         public string favIconBase64Encoding { get; set; }
     }
 
-    public class Image
+    public class Value
     {
-
         public string url { get; set; }
         public int height { get; set; }
         public int width { get; set; }
@@ -29,13 +28,12 @@ namespace ImagesApi.Model
         public string imageWebSearchUrl { get; set; }
         public string webpageUrl { get; set; }
     }
-    public class Response
+
+    public class Image
     {
-        public IList<Image> images { get; set; }
-
-
-
-
+        public string _type { get; set; }
+        public int totalCount { get; set; }
+        public IList<Value> value { get; set; }
     }
 
     //public class Image
@@ -44,6 +42,12 @@ namespace ImagesApi.Model
     //    public int totalCount { get; set; }
     //    public IList<Value> value { get; set; }
     //}
+    public class Response
+    {
+        public IList<Image> images { get; set; }
+    }
+
+
     public class ImageRoot
     {
         public Response response { get; set; }

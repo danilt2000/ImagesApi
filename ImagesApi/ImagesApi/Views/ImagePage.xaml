@@ -10,7 +10,7 @@
         </StackLayout>
     </NavigationPage.TitleView>
     <StackLayout>
-        <Entry x:Name="entry"  Placeholder="The name of the picture you are looking for " Margin="0,40,0,0"/>
+        <Entry x:Name="entry"  Placeholder="The name of the picture you are looking for " Margin="0,25,0,0"/>
         <Button Text="Start"
                 HorizontalOptions="Center"
 		 WidthRequest="300" 
@@ -19,6 +19,18 @@
 		Margin="0,20,0,0" 
 			Clicked="Button_Clicked"
                 />
+        <Button Text="Save"
+                HorizontalOptions="Center"
+		 WidthRequest="300" 
+		HeightRequest="50"
+		TextColor="Black"
+		Margin="0,20,0,0" 
+			Clicked="Button_Clicked"
+                />
+        <Image x:Name="mainImage" WidthRequest="300" HeightRequest="350" Source="" />
+
+
     </StackLayout>
+    
     
 </ContentPage>
