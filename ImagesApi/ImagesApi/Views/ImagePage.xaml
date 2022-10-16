@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ImagesApi.Views.ImagePage">
+    <NavigationPage.TitleView>
+        <StackLayout>
+            <Frame BackgroundColor="#ff7101" Padding="18" CornerRadius="0">
+                <Label Text="Tomas Bata University" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" Margin="0,0,65,0"/>
+            </Frame>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <StackLayout>
+        <Entry x:Name="entry"  Placeholder="The name of the picture you are looking for " Margin="0,40,0,0"/>
+        <Button Text="Start"
+                HorizontalOptions="Center"
+		 WidthRequest="300" 
+		HeightRequest="50"
+		TextColor="Black"
+		Margin="0,20,0,0" 
+			Clicked="Button_Clicked"
+                />
+    </StackLayout>
+    
+</ContentPage>

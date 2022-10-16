@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ImagesApi.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -54,6 +55,12 @@ namespace ImagesApi
                 // An unexpected error occured. No browser may be installed on the device.
             }
 
+
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ImagePage());
 
         }
     }

@@ -9,9 +9,9 @@ namespace ImagesApi
         public App()
         {
             InitializeComponent();
-            //MainPage = new NavigationPage(new Onboarding()) { BarBackgroundColor = Color.White, BarTextColor = Color.Black };
+            MainPage = new NavigationPage(new MainPage() { });
 
-            MainPage = new MainPage();
+            //MainPage = new MainPage();
         }
 
         protected override void OnStart()
