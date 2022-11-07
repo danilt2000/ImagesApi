@@ -22,7 +22,6 @@ namespace ImagesApi.Views
         {
             string image = await ImageLogic.GetImage(entry.Text);
             mainImage.Source = image;
-            DownloadFile
         }
     }
 }
